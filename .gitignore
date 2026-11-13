@@ -1,0 +1,56 @@
+# 依赖与构建产物
+node_modules/
+.pnpm-store/
+.next/
+/out/
+/dist/
+*.tsbuildinfo
+/next-env.d.ts
+
+# 环境配置：允许根目录模板及当前配置
+.env*
+!/.env.example
+!/.env.local
+
+# 本地私有数据
+.data/
+.tools/
+
+# 测试产物与部署缓存
+coverage/
+.nyc_output/
+test-results/
+playwright-report/
+blob-report/
+.vercel/
+/supabase/.temp/
+/supabase/.branches/
+
+# 日志、Python缓存及临时文件
+*.log
+*.log.*
+__pycache__/
+*.py[cod]
+*.tmp
+*.temp
+~$*
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# 本地交付文档、报告与渲染结果
+/output/
+
+# 极简仓库只保留运行环境说明
+/docs/*
+!/docs/runtime.md
+
+# 依赖本地历史材料的报告生成工具
+/scripts/build_test_report.py
+/scripts/collect_test_report_evidence.py
+/scripts/render_test_report_word.ps1
+
+# 真题原始材料仅保留来源清单和联调必需图片
+/data/sources/*
+!/data/sources/manifest.json
+!/data/sources/2025-question-page11.png

@@ -1,0 +1,631 @@
+[
+  {
+    "id": "gaokao-2025-national-i",
+    "year": 2025,
+    "title": "2025 年高考英语全国一卷 · 围棋艺术展",
+    "split": "development",
+    "maxScorePerQuestion": 1.5,
+    "passage": "An exhibition at the Jiushi Art Museum in Shanghai is featuring artwork inspired by Go, or weiqi in Chinese, {{56}} originated in China more than 4,000 years ago.\n\nGo is one of {{57}} earliest binary-based (基于二元的) games. The movements of the black and white pieces reflect the basic ideas of Eastern philosophy, according to Tu Ningning, who is in charge of the exhibition.\n\n“The exhibition brings together Go culture, cutting-edge technology and contemporary art,” says Tu. “We hope {{58}} (present) the rather abstract Go game and AI in a visual context, and initiate dialogues with minimalist art, conceptual art and expressionism.”\n\n“In a Go game, each move should serve a long-term goal. You try to lead the opponent into your trap and force them to follow your ‘{{59}} (guide)’ till they lose,” explains Wang Wei, a Go player among the visitors to the exhibition.\n\n“The players’ personalities {{60}} (reveal) during the game, and one’s weaknesses are exposed to the opponent,” she adds. “A decent winner always {{61}} (try) to beat the opponent {{62}} no more than one or two points as a gesture (姿态) of respect for the other side.”\n\nTu says that the balance between the black and white pieces, the beauty in the {{63}} (strategy) placement of the pieces, {{64}} the energy flow following each move inspired artists to create oil paintings, sculptures, {{65}} (digital) generated pictures and silk-screen prints for the exhibition.",
+    "questions": [
+      {
+        "number": "56",
+        "cue": "",
+        "answers": [
+          "which"
+        ],
+        "studentAnswer": "what",
+        "tagId": "relative-clause",
+        "explanation": {
+          "rule": "指物的先行词后，非限制性定语从句缺主语时可用 which。",
+          "evidence": "逗号后的 originated 缺少主语，前面的 Go / weiqi 是所指对象。",
+          "why": "what 不能在这里连接已有先行词的非限制性定语从句；应由 which 回指围棋。",
+          "example": "The game, which started centuries ago, is still popular."
+        }
+      },
+      {
+        "number": "57",
+        "cue": "",
+        "answers": [
+          "the"
+        ],
+        "studentAnswer": "the",
+        "tagId": "article",
+        "explanation": {
+          "rule": "one of the + 形容词最高级 + 复数名词表示“最……的……之一”。",
+          "evidence": "earliest 是 early 的最高级，后接 games。",
+          "why": "该处填写 the 与已发布参考答案一致。",
+          "example": "It is one of the oldest games in the world."
+        }
+      },
+      {
+        "number": "58",
+        "cue": "present",
+        "answers": [
+          "to present"
+        ],
+        "studentAnswer": "presenting",
+        "tagId": "infinitive",
+        "explanation": {
+          "rule": "hope 后接动词不定式作宾语：hope to do。",
+          "evidence": "主语 We 后已有谓语 hope，空格连接要呈现的内容。",
+          "why": "这里不能套用 enjoy doing 等搭配，应使用 hope to present。",
+          "example": "We hope to explain the rule clearly."
+        }
+      },
+      {
+        "number": "59",
+        "cue": "guide",
+        "answers": [
+          "guidance"
+        ],
+        "studentAnswer": "guide",
+        "tagId": "word-formation",
+        "explanation": {
+          "rule": "依据语意和句法，动词 guide 可派生为不可数名词 guidance，表示“指导、引导”。",
+          "evidence": "your 后是 follow 的名词宾语，语意是让对手跟随自己的引导。",
+          "why": "guide 作名词通常指向导或指南；这里的抽象引导用 guidance。",
+          "example": "Thank you for your guidance."
+        }
+      },
+      {
+        "number": "60",
+        "cue": "reveal",
+        "answers": [
+          "are revealed"
+        ],
+        "studentAnswer": "reveal",
+        "tagId": "passive",
+        "explanation": {
+          "rule": "一般现在时被动语态为 am/is/are + 过去分词，be 与主语保持数的一致。",
+          "evidence": "复数主语 The players’ personalities 是被揭示的对象，后句也使用 are exposed。",
+          "why": "personalities 与 reveal 是被动关系；不能直接用主动形式 reveal，需 are revealed。",
+          "example": "Their different styles are revealed during the match."
+        }
+      },
+      {
+        "number": "61",
+        "cue": "try",
+        "answers": [
+          "tries"
+        ],
+        "studentAnswer": "try",
+        "tagId": "subject-agreement",
+        "explanation": {
+          "rule": "一般现在时中，第三人称单数主语搭配动词第三人称单数形式。",
+          "evidence": "主语 A decent winner 为单数，always 表示通常行为。",
+          "why": "try 需变为 tries；以辅音字母加 y 结尾，变 y 为 i 再加 es。",
+          "example": "A careful player always tries a different approach."
+        }
+      },
+      {
+        "number": "62",
+        "cue": "",
+        "answers": [
+          "by"
+        ],
+        "studentAnswer": "by",
+        "tagId": "preposition",
+        "explanation": {
+          "rule": "by 可引出获胜或领先的差额、幅度。",
+          "evidence": "no more than one or two points 描述击败对手时的分差。",
+          "why": "此处填写 by 与已发布参考答案一致。",
+          "example": "Our team won by one point."
+        }
+      },
+      {
+        "number": "63",
+        "cue": "strategy",
+        "answers": [
+          "strategic"
+        ],
+        "studentAnswer": "strategy",
+        "tagId": "word-formation",
+        "explanation": {
+          "rule": "形容词可置于名词前作定语；strategy 的形容词形式是 strategic。",
+          "evidence": "空格后为名词 placement，描述布局所具有的策略性。",
+          "why": "原形 strategy 是名词；此处需要 strategic 修饰 placement。",
+          "example": "They made a strategic choice."
+        }
+      },
+      {
+        "number": "64",
+        "cue": "",
+        "answers": [
+          "and"
+        ],
+        "studentAnswer": "and",
+        "tagId": "conjunction",
+        "explanation": {
+          "rule": "并列的多个名词短语在最后一项前通常用 and 连接。",
+          "evidence": "the balance、the beauty 与 the energy flow 共同构成 inspired 的并列主语。",
+          "why": "此处是并列主语结构，填写 and 与参考答案一致；不应误讲为强调句。",
+          "example": "The colour, the shape, and the texture inspired her."
+        }
+      },
+      {
+        "number": "65",
+        "cue": "digital",
+        "answers": [
+          "digitally"
+        ],
+        "studentAnswer": "digital",
+        "tagId": "word-formation",
+        "explanation": {
+          "rule": "副词修饰分词 generated；digital 对应的副词为 digitally。",
+          "evidence": "空格紧邻 generated，描述图片生成的方式。",
+          "why": "digital 是形容词；这里需 digitally 修饰 generated，而非直接修饰 pictures。",
+          "example": "The image was digitally generated."
+        }
+      }
+    ],
+    "sources": [
+      {
+        "title": "高考直通车全国一卷题卷扫描PDF（已本地保存）",
+        "url": "https://imgs.app.gaokaozhitongche.com/resource/pdf/paper/202506/20250611091907_1t7P68.pdf",
+        "role": "question",
+        "locator": "PDF第11页完整语法填空56–65；本地data/sources/2025-question-page11.png"
+      },
+      {
+        "title": "高考直通车PDF教师参考汇总（已本地保存，非官方）",
+        "url": "https://imgs.app.gaokaozhitongche.com/resource/pdf/paper/202506/20250611091907_1t7P68.pdf",
+        "role": "answer",
+        "locator": "PDF第13页下半部教师1/教师2均列56–65；排除上半部考生回忆错误答案；本地2025-answer-page13.png"
+      },
+      {
+        "title": "掌上高考转载学科网试卷与参考答案 PDF",
+        "url": "https://static-gkcx.gaokao.cn/upload/zhenti/20250611/1749605734_7546.pdf",
+        "role": "question",
+        "locator": "PDF 第7–8页，语法填空；此转载删听力后题号36–45，对应原卷56–65"
+      },
+      {
+        "title": "掌上高考转载参考答案 PDF",
+        "url": "https://static-gkcx.gaokao.cn/upload/zhenti/20250611/1749605734_7546.pdf",
+        "role": "answer",
+        "locator": "PDF 第12页，36–45对应原卷56–65；非考试院发布"
+      },
+      {
+        "title": "二一教育全国一卷真题与参考答案公开预览",
+        "url": "https://zy.21cnjy.com/23168472",
+        "role": "answer",
+        "locator": "资源简介“第二节”56–65；与另一转载PDF答案逐项一致"
+      },
+      {
+        "title": "柯帕斯英语网语法填空汇编公开文本",
+        "url": "https://www.cpsenglish.com/article/267",
+        "role": "question",
+        "locator": "“2025年语法填空题汇编 / 2025新高标卷1”整篇与56–65"
+      },
+      {
+        "title": "教育部教育考试院编写语文出版社官方试读",
+        "url": "https://www.ywcbs.com/app/gkstfx2026/yy/files/basic-html/page7.html",
+        "role": "official_context",
+        "locator": "纸书第2页：确认全国一卷语法填空为围棋主题艺术展；不包含全题答案"
+      }
+    ],
+    "verification": {
+      "status": "cross_checked",
+      "note": "已下载题卷扫描PDF，逐项视觉核对第11页完整语篇与10个提示词；第13页下部两份教师参考及其他公开记录的10个答案一致。该PDF上部另有错误考生回忆，未采用。原始PDF、渲染页及SHA-256保存在data/sources。官方出版节选仅确认主题，仍非考试院官方全答案核验、未教师复核。",
+      "checkedAt": "2026-11-12",
+      "checkedBy": "Codex（公开来源交叉核对；未由教师复核）"
+    },
+    "studentAnswerNote": "学生作答由 Codex 为演示人工构造，包含正确、错误和漏答情况；并非真实考生记录，不代表真实错误分布。讲解为依据题干与参考答案重新编写的教学草稿，未经教师审核。"
+  },
+  {
+    "id": "gaokao-2023-new-standard-i",
+    "year": 2023,
+    "title": "2023 年高考英语新课标Ⅰ卷 · 小笼包",
+    "split": "test",
+    "maxScorePerQuestion": 1.5,
+    "passage": "Xiao long bao (soup dumplings), those amazing constructions of delicate dumpling wrappers encasing hot, {{56}} (taste) soup and sweet, fresh meat, are far and away my favorite Chinese street food. The dumplings arrive steaming and dangerously hot. To eat one, you have to decide whether {{57}} (bite) a small hole in it first, releasing the steam and risking a spill (溢出), {{58}} to put the whole dumpling in your mouth, letting the hot soup explode on your tongue (舌头).\n\nShanghai may be the {{59}} (recognize) home of the soup dumpling, but food historians will actually point you to the neighboring ancient canal town of Nanxiang as xiao long bao’s birthplace. There, you’ll find them prepared differently—more dumpling and less soup—and the wrappers are pressed {{60}} hand rather than rolled.\n\nNanxiang aside, the best xiao long bao have a fine skin, allowing them {{61}} (lift) out of the steamer basket without tearing or spilling any of {{62}} (they) contents. The meat should be fresh with {{63}} touch of sweetness, and the surrounding soup hot, clear and delicious.\n\nNo matter where I buy them, though, one steamer basket is {{64}} (rare) enough, yet two seems greedy, and so I am always left {{65}} (want) more next time.",
+    "questions": [
+      {
+        "number": "56",
+        "cue": "taste",
+        "answers": [
+          "tasty"
+        ],
+        "studentAnswer": "taste",
+        "tagId": "word-formation",
+        "explanation": {
+          "rule": "形容词 tasty 表示“美味的”，可与 hot 并列修饰名词 soup。",
+          "evidence": "空格后为 soup，前有 hot，整个名词短语描述馅内汤汁。",
+          "why": "taste 的名词或动词形式不符合该处的形容词定语位置。",
+          "example": "The bowl contains hot, tasty soup."
+        }
+      },
+      {
+        "number": "57",
+        "cue": "bite",
+        "answers": [
+          "to bite"
+        ],
+        "studentAnswer": "to bite",
+        "tagId": "infinitive",
+        "explanation": {
+          "rule": "whether + to do 可在动词后作宾语，表示“是否做某事”。",
+          "evidence": "decide whether 后的动作与后文 to put 构成选择。",
+          "why": "填写 to bite 与参考答案一致，同时与后面的 to put 保持并列。",
+          "example": "I cannot decide whether to stay or to leave."
+        }
+      },
+      {
+        "number": "58",
+        "cue": "",
+        "answers": [
+          "or"
+        ],
+        "studentAnswer": "and",
+        "tagId": "conjunction",
+        "explanation": {
+          "rule": "whether ... or ... 表示“是……还是……”，连接两种备选做法。",
+          "evidence": "前文提出先咬小孔，后文提出把整个小笼包放入口中。",
+          "why": "两个动作是选择关系；and 不能表达这里的 whether ... or ... 结构。",
+          "example": "We must decide whether to walk or to take a bus."
+        }
+      },
+      {
+        "number": "59",
+        "cue": "recognize",
+        "answers": [
+          "recognized"
+        ],
+        "studentAnswer": "recognizing",
+        "tagId": "participle-ed",
+        "explanation": {
+          "rule": "过去分词可作前置定语，表示被动或已形成的状态。",
+          "evidence": "home 是被人们公认的发源地，recognize 与 home 的语义关系为被动。",
+          "why": "recognizing 会表示主动进行认知；recognized 表示“被公认的”。",
+          "example": "It is a recognized centre of research."
+        }
+      },
+      {
+        "number": "60",
+        "cue": "",
+        "answers": [
+          "by"
+        ],
+        "studentAnswer": "by",
+        "tagId": "preposition",
+        "explanation": {
+          "rule": "by hand 是表示“手工、用手”的固定介词短语。",
+          "evidence": "pressed 后描述操作方式，后文 rather than rolled 与之对照。",
+          "why": "此处填写 by 与参考答案一致。",
+          "example": "The invitations were written by hand."
+        }
+      },
+      {
+        "number": "61",
+        "cue": "lift",
+        "answers": [
+          "to be lifted"
+        ],
+        "studentAnswer": "to lift",
+        "tagId": "infinitive",
+        "explanation": {
+          "rule": "allow sb/sth to do 中，若该对象承受动作，需用不定式被动式 to be done。",
+          "evidence": "them 指小笼包；小笼包被从蒸笼里提起，而非自己执行 lift。",
+          "why": "to lift 缺少被动意义；应使用 to be lifted。",
+          "example": "The handles allow the box to be lifted safely."
+        }
+      },
+      {
+        "number": "62",
+        "cue": "they",
+        "answers": [
+          "their"
+        ],
+        "studentAnswer": "them",
+        "tagId": "pronoun",
+        "explanation": {
+          "rule": "形容词性物主代词修饰名词，they 对应 their。",
+          "evidence": "空格后是名词 contents，指小笼包里面的馅料和汤汁。",
+          "why": "them 是宾格，不能直接表示 contents 的所属关系；应为 their。",
+          "example": "Keep the boxes and their contents dry."
+        }
+      },
+      {
+        "number": "63",
+        "cue": "",
+        "answers": [
+          "a"
+        ],
+        "studentAnswer": "a",
+        "tagId": "article",
+        "explanation": {
+          "rule": "a touch of 表示“少许、一点儿”，此处 touch 为单数名词。",
+          "evidence": "touch of sweetness 描述肉馅中少许甜味。",
+          "why": "该处填写 a 与参考答案一致。",
+          "example": "Add a touch of salt."
+        }
+      },
+      {
+        "number": "64",
+        "cue": "rare",
+        "answers": [
+          "rarely"
+        ],
+        "studentAnswer": "rare",
+        "tagId": "word-formation",
+        "explanation": {
+          "rule": "rarely 是副词，表示“很少、不常”，用于表达一笼很少能让人满足。",
+          "evidence": "one steamer basket is ... enough 中的空格需要表达频率。",
+          "why": "rare 是形容词“罕见的”；此处不能用来直接表达“很少足够”。",
+          "example": "One visit is rarely enough."
+        }
+      },
+      {
+        "number": "65",
+        "cue": "want",
+        "answers": [
+          "wanting"
+        ],
+        "studentAnswer": "",
+        "tagId": "participle-ing",
+        "explanation": {
+          "rule": "be left doing 可表示“最后仍处于做某事的状态”，doing 与主体为主动关系。",
+          "evidence": "I am always left 后接状态，叙述者仍想下次再吃。",
+          "why": "本次示例漏答；根据 I 与 want 的主动关系，应补 wanting。",
+          "example": "The ending left me wondering what happened next."
+        }
+      }
+    ],
+    "sources": [
+      {
+        "title": "高考直通车2023新课标Ⅰ卷题卷扫描PDF（已本地保存）",
+        "url": "https://img.gaokaozhitongche.com/resource/pdf/paper/202510/20251023023510_2LdFtx.pdf",
+        "role": "question",
+        "locator": "PDF第13页/纸书93页完整语法填空56–65；本地data/sources/2023-question-page13.png"
+      },
+      {
+        "title": "高考直通车2023新课标Ⅰ卷参考答案扫描（已本地保存）",
+        "url": "https://img.gaokaozhitongche.com/resource/pdf/paper/202510/20251023023510_2LdFtx.pdf",
+        "role": "answer",
+        "locator": "PDF第17页/纸书131页，56–65；本地data/sources/2023-answer-page17.png"
+      },
+      {
+        "title": "二一教育2023真题专项汇编公开文本",
+        "url": "https://zy.21cnjy.com/16594496",
+        "role": "question",
+        "locator": "资源简介第一篇①–⑩对应56–65；完整转录后已按本地扫描PDF第13页逐字视觉核对"
+      },
+      {
+        "title": "二一教育2023真题专项汇编参考答案",
+        "url": "https://zy.21cnjy.com/16594496",
+        "role": "answer",
+        "locator": "“一、答案”十个答案，与原题同序"
+      },
+      {
+        "title": "柯帕斯英语网语法填空汇编",
+        "url": "https://www.cpsenglish.com/article/267",
+        "role": "answer",
+        "locator": "“2023年语法填空 / 新全国卷1”56–65答案，与二一教育一致"
+      },
+      {
+        "title": "浙江省教育考试院2023年6月试题评析",
+        "url": "https://www.zjzs.net/art/2023/6/12/art_31_4454.html",
+        "role": "official_context",
+        "locator": "英语段落确认新课标Ⅰ卷及小笼包语法填空主题；未列完整标准答案"
+      }
+    ],
+    "verification": {
+      "status": "cross_checked",
+      "note": "v1.1已下载含完整题卷与参考答案的扫描PDF：第13页（纸书93）逐字视觉核对现有完整篇章，第17页（纸书131）核对56–65答案，未发现需要改动题干或答案。扫描确认steam、ancient、though、surrounding soup、steamer basket等用词；教育在线早期重排图存在stream、hao及多余allowing them等已知错字，不作原题依据。保留cross_checked：下载来源为转载，尚非考试院官方原件或教师复核。",
+      "checkedAt": "2026-11-12",
+      "checkedBy": "Codex（公开来源交叉核对；未由教师复核）"
+    },
+    "studentAnswerNote": "学生作答由 Codex 为演示人工构造，包含正确、错误和漏答情况；并非真实考生记录，不代表真实错误分布。讲解为依据题干与参考答案重新编写的教学草稿，未经教师审核。"
+  },
+  {
+    "id": "gaokao-2024-new-standard-i",
+    "year": 2024,
+    "title": "2024 年高考英语新课标Ⅰ卷 · 丝路花园",
+    "split": "test",
+    "maxScorePerQuestion": 1.5,
+    "passage": "Heatherwick Studio recently built a greenhouse at the edge of the National Trust’s Woolbeding Gardens. This beautiful structure, named Glasshouse, is at the centre of a new garden that shows how the Silk Road influences English gardens even in modern times.\n\nThe latest {{56}} (engineer) techniques are applied to create this protective {{57}} (function) structure that is also beautiful. The design features ten steel “sepals (萼片)” made of glass and aluminium (铝). These sepals open on warm days {{58}} (give) the inside plants sunshine and fresh air. In cold weather, the structure stays {{59}} (close) to protect the plants.\n\nFurther, the Silk Route Garden around the greenhouse {{60}} (walk) visitors through a journey influenced by the ancient Silk Road, by which silk as well as many plant species came to Britain for {{61}} first time. These plants included modern Western {{62}} (favourite) such as rosemary, lavender and fennel. The garden also contains a winding path that guides visitors through the twelve regions of the Silk Road. The path offers over 300 plant species for visitors to see, too.\n\nThe Glasshouse stands {{63}} a great achievement in contemporary design, to house the plants of the southwestern part of China at the end of a path retracing (追溯) the steps along the Silk Route {{64}} brought the plants from their native habitat in Asia to come to define much of the {{65}} (rich) of gardening in England.",
+    "questions": [
+      {
+        "number": "56",
+        "cue": "engineer",
+        "answers": [
+          "engineering"
+        ],
+        "studentAnswer": "engineered",
+        "tagId": "word-formation",
+        "explanation": {
+          "rule": "engineering 可作名词定语，engineering techniques 表示“工程技术”。",
+          "evidence": "空格位于 latest 与名词 techniques 之间，说明技术所属的类别。",
+          "why": "这里需要表示工程领域的 engineering；不能仅因后接名词就机械使用过去分词。",
+          "example": "Modern engineering techniques made the project possible."
+        }
+      },
+      {
+        "number": "57",
+        "cue": "function",
+        "answers": [
+          "functional"
+        ],
+        "studentAnswer": "functional",
+        "tagId": "word-formation",
+        "explanation": {
+          "rule": "名词 function 可派生为形容词 functional，表示“实用的、功能性的”。",
+          "evidence": "空格与 protective 一起修饰 structure，后文 also beautiful 构成补充。",
+          "why": "functional 与公开参考答案一致。",
+          "example": "The building is both functional and beautiful."
+        }
+      },
+      {
+        "number": "58",
+        "cue": "give",
+        "answers": [
+          "to give"
+        ],
+        "studentAnswer": "giving",
+        "tagId": "infinitive",
+        "explanation": {
+          "rule": "动词不定式可作目的状语，表示动作的目的。",
+          "evidence": "sepals open on warm days 后解释打开的目的：给植物阳光和空气。",
+          "why": "这里的参考答案用 to give 明确表示目的；giving 不能替代该处的预期结构。",
+          "example": "She opened the window to let fresh air in."
+        }
+      },
+      {
+        "number": "59",
+        "cue": "close",
+        "answers": [
+          "closed"
+        ],
+        "studentAnswer": "closely",
+        "tagId": "participle-ed",
+        "explanation": {
+          "rule": "系动词 stay 后用形容词表状态；closed 表示“关闭的”。",
+          "evidence": "the structure stays ... 与前文 warm days 时 open 相对。",
+          "why": "closely 是副词“紧密地、仔细地”；此处表达关闭状态，应为 closed。",
+          "example": "The door stays closed in winter."
+        }
+      },
+      {
+        "number": "60",
+        "cue": "walk",
+        "answers": [
+          "walks"
+        ],
+        "studentAnswer": "walk",
+        "tagId": "subject-agreement",
+        "explanation": {
+          "rule": "一般现在时中，单数主语的谓语动词使用第三人称单数形式。",
+          "evidence": "主语为单数 the Silk Route Garden；walk visitors through 表示带领游客体验。",
+          "why": "主语不是 visitors；walk 应变为 walks。",
+          "example": "The guide walks visitors through the exhibition."
+        }
+      },
+      {
+        "number": "61",
+        "cue": "",
+        "answers": [
+          "the"
+        ],
+        "studentAnswer": "the",
+        "tagId": "article",
+        "explanation": {
+          "rule": "for the first time 是表示“第一次”的固定表达。",
+          "evidence": "first 是序数词，指植物第一次来到英国。",
+          "why": "填写 the 与公开参考答案一致。",
+          "example": "I visited the garden for the first time."
+        }
+      },
+      {
+        "number": "62",
+        "cue": "favourite",
+        "answers": [
+          "favourites",
+          "favorites"
+        ],
+        "studentAnswer": "favourite",
+        "tagId": "noun",
+        "explanation": {
+          "rule": "favourite 在这里作可数名词，表示“深受喜爱的东西”，多项列举需要复数。",
+          "evidence": "such as 后列出 rosemary、lavender 和 fennel 三种植物。",
+          "why": "单数 favourite 不符合此处多项所指；favourites 和美式拼写 favorites 均在参考记录中列为可接受。",
+          "example": "These flowers are local favourites."
+        }
+      },
+      {
+        "number": "63",
+        "cue": "",
+        "answers": [
+          "as"
+        ],
+        "studentAnswer": "for",
+        "tagId": "preposition",
+        "explanation": {
+          "rule": "as 表示“作为”；stand as 可表达以某种身份或地位存在。",
+          "evidence": "a great achievement 描述 Glasshouse 本身所体现的成就。",
+          "why": "stand for 常表示代表或象征某物；这里强调温室作为一项成就，应为 as。",
+          "example": "The building stands as a symbol of cooperation."
+        }
+      },
+      {
+        "number": "64",
+        "cue": "",
+        "answers": [
+          "that",
+          "which"
+        ],
+        "studentAnswer": "which",
+        "tagId": "relative-clause",
+        "explanation": {
+          "rule": "指物的限制性定语从句缺主语时，关系代词可用 that 或 which。",
+          "evidence": "空格后 brought 有宾语 the plants，但缺主语；需联系整句有关丝路带来植物的内容。",
+          "why": "本例 which 与多处参考答案列出的 that/which 一致，不应只因某个早期答案页仅列 that 而判错。",
+          "example": "The route that brought the plants west is shown on the map."
+        }
+      },
+      {
+        "number": "65",
+        "cue": "rich",
+        "answers": [
+          "richness"
+        ],
+        "studentAnswer": "rich",
+        "tagId": "word-formation",
+        "explanation": {
+          "rule": "形容词 rich 可派生为抽象名词 richness，表示“丰富、多样”。",
+          "evidence": "much of the ... of gardening 中，冠词 the 后、of 前需要名词中心词。",
+          "why": "rich 是形容词，不能单独充当该处名词短语的中心；应为 richness。",
+          "example": "The richness of the garden surprised us."
+        }
+      }
+    ],
+    "sources": [
+      {
+        "title": "教育屋托管学科网2024试卷及参考答案PDF（已本地保存）",
+        "url": "https://down.jiaoyuwu.com/m00/82/ea/2ac25121d44f950f9d3aef5e48d315ae.pdf",
+        "role": "question",
+        "locator": "PDF第10页完整语法填空56–65；本地data/sources/2024-question-page10.png；此为重排参考版"
+      },
+      {
+        "title": "教育屋托管参考答案PDF（已本地保存，非官方）",
+        "url": "https://down.jiaoyuwu.com/m00/82/ea/2ac25121d44f950f9d3aef5e48d315ae.pdf",
+        "role": "answer",
+        "locator": "PDF第15页56–65，64列which##that；62列favorites；与其他记录英美拼写交叉核对"
+      },
+      {
+        "title": "二一教育2024新课标Ⅰ卷课件公开转录",
+        "url": "https://zy.21cnjy.com/20717854",
+        "role": "question",
+        "locator": "“2024年新课标I语法填空解析”完整四段篇章，56–65"
+      },
+      {
+        "title": "二一教育2024新课标Ⅰ卷课件参考答案",
+        "url": "https://zy.21cnjy.com/20717854",
+        "role": "answer",
+        "locator": "语法填空解析56–65，64明确列which/that；不采用其部分不准确语法说明"
+      },
+      {
+        "title": "柯帕斯英语网2024精校真题与参考答案",
+        "url": "https://www.cpsenglish.com/index.php/article/1223",
+        "role": "answer",
+        "locator": "篇末第三部分第二节56–65；62 favourites/favorites、64 that/which"
+      },
+      {
+        "title": "浙江省教育考试院2024年6月试题评析",
+        "url": "https://www.zjzs.net/art/2024/6/11/art_31_9716.html",
+        "role": "official_context",
+        "locator": "英语段落确认英国“丝路花园”语篇主题；不包含逐题答案"
+      },
+      {
+        "title": "教育部教育考试院编写语文出版社2025版介绍",
+        "url": "https://www.ywcbs.com/wssd/xssj/202411/t20241104_1230.html",
+        "role": "official_context",
+        "locator": "说明正文含2024原题和参考答案、附录含2023全国卷答案；当前未获得对应整页"
+      }
+    ],
+    "verification": {
+      "status": "cross_checked",
+      "note": "v1.1已下载试卷/参考答案重排PDF并视觉核对第10页完整篇章、10个提示词和第15页参考答案；保留62英美拼写和64 that/which。教育在线相关图片实为早期网络答案汇编且64不完整，未用作原题或唯一答案依据。完整PDF与渲染页、哈希在data/sources。仍为cross_checked、未取得官方全答案逐题核验、未教师复核。",
+      "checkedAt": "2026-11-12",
+      "checkedBy": "Codex（公开来源交叉核对；未由教师复核）"
+    },
+    "studentAnswerNote": "学生作答由 Codex 为演示人工构造，包含正确、错误和漏答情况；并非真实考生记录，不代表真实错误分布。讲解为依据题干与参考答案重新编写的教学草稿，未经教师审核。"
+  }
+]

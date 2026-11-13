@@ -1,0 +1,108 @@
+{
+  "revision": "1.1",
+  "retrievedAt": "2026-11-12",
+  "checkedBy": "Codex（来源视觉核对；未教师复核）",
+  "renderer": "Bundled Poppler pdftoppm, PNG, 170 DPI",
+  "files": [
+    {
+      "file": "2023-gaokaozhitongche.pdf",
+      "note": "题卷扫描第13页/纸书93页，答案扫描第17页/纸书131页；转载，非官方发布",
+      "sha256": "e4b858767cc432ef35e7f7045ed2bc02731987bb0920d2be55978ddb56b11f6a",
+      "url": "https://img.gaokaozhitongche.com/resource/pdf/paper/202510/20251023023510_2LdFtx.pdf",
+      "kind": "download",
+      "bytes": 7746090
+    },
+    {
+      "file": "2024-jiaoyuwu-reference.pdf",
+      "note": "重排题卷第10页；参考答案第15页；转载，非官方发布",
+      "sha256": "d5579802706cf765ef17238ff184867ae6f283a079adedd9d610a63be0475c0f",
+      "url": "https://down.jiaoyuwu.com/m00/82/ea/2ac25121d44f950f9d3aef5e48d315ae.pdf",
+      "kind": "download",
+      "bytes": 428680
+    },
+    {
+      "file": "2025-gaokaozhitongche.pdf",
+      "note": "题卷扫描第11页；参考汇总第13页下部教师答案；不采用上部考生回忆错误答案",
+      "sha256": "5fa977aaad5cfab40094f72010358d84d73a74f613557205f0334e18e59e92c5",
+      "url": "https://imgs.app.gaokaozhitongche.com/resource/pdf/paper/202506/20250611091907_1t7P68.pdf",
+      "kind": "download",
+      "bytes": 6748550
+    },
+    {
+      "kind": "render",
+      "note": "纸书93页，完整10空",
+      "sourceFile": "2023-gaokaozhitongche.pdf",
+      "pageNumber": 13,
+      "bytes": 1018914,
+      "sha256": "10f1d4038aaa2a42d4cfe3d5f9e427a1a51637672338bb1efe16ebf2f406e9a4",
+      "dpi": 170,
+      "file": "2023-question-page13.png"
+    },
+    {
+      "kind": "render",
+      "note": "纸书131页，56–65",
+      "sourceFile": "2023-gaokaozhitongche.pdf",
+      "pageNumber": 17,
+      "bytes": 613062,
+      "sha256": "7e8fdc8e6b209942a3f80195eb5e2d17ad0c05b73dd0563f538bc083499d2aa5",
+      "dpi": 170,
+      "file": "2023-answer-page17.png"
+    },
+    {
+      "kind": "render",
+      "note": "完整10空，重排版",
+      "sourceFile": "2024-jiaoyuwu-reference.pdf",
+      "pageNumber": 10,
+      "bytes": 327311,
+      "sha256": "ee1fbb7e1549359194944466f2c3a5144db4d3954063c8521eef7a9bd54e3d60",
+      "dpi": 170,
+      "file": "2024-question-page10.png"
+    },
+    {
+      "kind": "render",
+      "note": "56–65，64明确which##that",
+      "sourceFile": "2024-jiaoyuwu-reference.pdf",
+      "pageNumber": 15,
+      "bytes": 229022,
+      "sha256": "82e5882e1e3ba54c7f1ee7adc00b99fa24fddd1ec22e1aecc8c9a2cd0cdb030c",
+      "dpi": 170,
+      "file": "2024-answer-page15.png"
+    },
+    {
+      "kind": "render",
+      "note": "完整10空",
+      "sourceFile": "2025-gaokaozhitongche.pdf",
+      "pageNumber": 11,
+      "bytes": 1593067,
+      "sha256": "5712132f464e047b58c9d16399961db713c54d5b49334e8097aa2b8666eab997",
+      "dpi": 170,
+      "file": "2025-question-page11.png"
+    },
+    {
+      "kind": "render",
+      "note": "仅下部教师1/教师2参考用于核对",
+      "sourceFile": "2025-gaokaozhitongche.pdf",
+      "pageNumber": 13,
+      "bytes": 865882,
+      "sha256": "7bf4e775f2930afe72b6f02e26463e21b4e5a3c239929398f4a99c5a373f7a3f",
+      "dpi": 170,
+      "file": "2025-answer-page13.png"
+    },
+    {
+      "file": "2023-eol-question-page6.png",
+      "note": "存在stream、hao、多余allowing them等错字的重排，不作原题依据",
+      "sha256": "6d7139a78001fd94c1a8ba04963915cb48818eae4e7cf61b1b4e023c5116726f",
+      "url": "https://img.eol.cn/e_images/gk/2023/2023st/xgk1/yy05.png",
+      "kind": "rejected_reference",
+      "bytes": 397508
+    },
+    {
+      "file": "2024-eol-answer-page4.png",
+      "note": "早期网络收集版，64只列That且自述须看改编后试题，不作唯一答案依据",
+      "sha256": "48f3bd3feaf05382f18e07914fe65cd9a9a1cd8d68daf7627e63761bdc537299",
+      "url": "https://img.eol.cn/e_images/gk/2024/2024st/xkb1/yy03.png",
+      "kind": "rejected_reference",
+      "bytes": 541017
+    }
+  ]
+}
