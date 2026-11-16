@@ -120,9 +120,9 @@ test("real-upload pipeline sends image and structured DeepSeek requests (provide
     assert.deepEqual(request.response_format, { type: "json_object" });
     const system = request.messages[0].content as string;
     let result;
-    if (system.includes("转写助手")) {
+    if (Array.isArray(request.messages[1].content)) {
       assert.ok(request.messages[1].content[1].image_url.url.startsWith("data:image/jpeg;base64,"));
-      result = { title: "测试上传 · 非真题", passage: "Every morning, Lily {{1}} (walk) to school. Her friends {{2}} (be) kind. She carries {{3}} umbrella on rainy days.", questions: [{ number: "1", cue: "walk", studentAnswer: "walk" }, { number: "2", cue: "be", studentAnswer: "are" }, { number: "3", cue: "", studentAnswer: "a" }], warnings: [] };
+      result = { title: "测试上传 · 非真题", passage: "Every morning, Lily {{1}} (walk) to school. Her friends {{2}} (be) kind. She carries {{3}} umbrella on rainy days.", hasStudentAnswers: true, questions: [{ number: "1", cue: "walk", studentAnswer: "walk", answerStatus: "answered", answerEvidence: "walk" }, { number: "2", cue: "be", studentAnswer: "are", answerStatus: "answered", answerEvidence: "are" }, { number: "3", cue: "", studentAnswer: "a", answerStatus: "answered", answerEvidence: "a" }], warnings: [] };
     } else if (system.includes("出题助手")) {
       result = { items: [1, 2, 3].map(index => ({ prompt: `Example ${index}: The boy ____ every morning.`, cue: "walk", answers: ["walks"], explanation: "一般现在时主谓一致。" })) };
     } else {

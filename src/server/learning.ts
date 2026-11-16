@@ -1,9 +1,12 @@
 import { randomUUID } from "node:crypto";
 import type { QuestionResult, ReviewTask, StoreState } from "../lib/types";
+import { isBlankAnswer } from "../lib/answers";
 export const normalizeAnswer = (answer: string) => answer.normalize("NFKC").trim().replace(/\s+/g, " ");
 export function gradeAnswer(answer: string, references: string[], uncertain = false): QuestionResult["gradeStatus"] {
-  if (uncertain || answer.includes("无法辨认") || !references.length) return "uncertain";
-  return references.some(reference => normalizeAnswer(reference) === normalizeAnswer(answer)) ? "correct" : "incorrect";
+  const validReferences = references.filter(reference => !isBlankAnswer(reference));
+  if (uncertain || answer.includes("无法辨认") || !validReferences.length) return "uncertain";
+  if (isBlankAnswer(answer)) return "incorrect";
+  return validReferences.some(reference => normalizeAnswer(reference) === normalizeAnswer(answer)) ? "correct" : "incorrect";
 }
 export interface ReviewScheduler { nextDue(previousLevel: number, correct: boolean, now?: Date): { level: number; dueAt: string } }
 export const fixedScheduler: ReviewScheduler = {

@@ -1,6 +1,7 @@
 import { createHash, randomUUID } from "node:crypto";
 import type { Capture, InputQuestion, Job, Overview, PracticeSession, StoreState, Submission } from "../lib/types";
 import { TAGS, isTag } from "../lib/tags";
+import { isBlankAnswer, preserveStudentAnswer, studentAnswerStatus } from "../lib/answers";
 import { authenticate, checkOrigin } from "./auth";
 import { AppError, assert, config } from "./config";
 import { imageNormalizer } from "./files";
@@ -38,7 +39,15 @@ function questions(value: unknown, current?: InputQuestion[]): InputQuestion[] {
     const number = text(item.number, "题号", 10);
     assert(/^\d{1,3}$/.test(number), "题号应为数字");
     const existing = current?.find(question => question.id === item.id);
-    return { id: existing?.id || randomUUID(), number, cue: text(item.cue ?? "", "提示词", 100), studentAnswer: text(item.studentAnswer ?? "", "作答", 200) };
+    const studentAnswer = text(item.studentAnswer ?? "", "作答", 200);
+    if (item.answerStatus !== undefined) assert(["answered", "blank", "uncertain"].includes(item.answerStatus as string), "作答状态无效");
+    const manuallyEdited = item.answerOrigin === "manual" || !existing || (item.answerStatus === undefined && studentAnswer !== existing.studentAnswer);
+    const answerStatus = manuallyEdited ? studentAnswerStatus({ studentAnswer }) : item.answerStatus as InputQuestion["answerStatus"] ?? existing?.answerStatus;
+    return preserveStudentAnswer({
+      id: existing?.id || randomUUID(), number, cue: text(item.cue ?? "", "提示词", 100), studentAnswer,
+      answerStatus, answerOrigin: manuallyEdited ? "manual" : existing?.answerOrigin,
+      ...(!manuallyEdited && studentAnswer === existing?.studentAnswer && existing?.answerEvidence ? { answerEvidence: existing.answerEvidence } : {}),
+    });
   });
   assert(new Set(result.map(item => item.number)).size === result.length, "题号不能重复");
   assert(new Set(result.map(item => item.id)).size === result.length, "小题标识不能重复");
@@ -99,7 +108,7 @@ export async function handleApi(request: Request): Promise<Response> {
           const sampleId = text(input.sampleId, "样例标识");
           key = requestKey(input.clientRequestId); inputHash = hash({ sampleId });
           const sample = await getSample(sampleId);
-          capture = { id, userId, version: 1, title: sample.title, passage: sample.passage, questions: sample.questions.map(question => ({ id: randomUUID(), number: question.number, cue: question.cue, studentAnswer: question.studentAnswer })), warnings: [sample.studentAnswerNote, "当前为样例回放，未调用 DeepSeek。参考答案为公开资料交叉核对，尚未教师复核。"], sampleId, status: "completed", stage: "请核对样例题面与模拟作答", createdAt: new Date().toISOString(), mode: "sample" };
+          capture = { id, userId, version: 1, title: sample.title, passage: sample.passage, questions: sample.questions.map(question => preserveStudentAnswer({ id: randomUUID(), number: question.number, cue: question.cue, studentAnswer: question.studentAnswer, answerOrigin: "sample" as const })), warnings: [sample.studentAnswerNote, "当前为样例回放，未调用 DeepSeek。参考答案为公开资料交叉核对，尚未教师复核。"], sampleId, status: "completed", stage: "请核对样例题面与模拟作答", createdAt: new Date().toISOString(), mode: "sample" };
         }
         const existing = previous(await readState(userId), userId, key, "capture", inputHash);
         if (existing) return json((await readState(userId)).captures.find(item => item.id === existing));
@@ -230,11 +239,12 @@ export async function handleApi(request: Request): Promise<Response> {
           if (oldId) return item;
           assert(item.status === "completed" && item.items.length === 3, "请等待练习生成完成", 422);
           if (item.completedAt) return item;
-          assert(Array.isArray(input.responses) && input.responses.length === item.items.length, "请提交每道题的作答", 422);
+          assert(Array.isArray(input.responses) && input.responses.length === item.items.length, "请提交全部题目的作答记录，未作答的题可留空。", 422);
           const responses = input.responses as Json[];
           assert(new Set(responses.map(value => value.itemId)).size === item.items.length && responses.every(value => item.items.some(question => question.id === value.itemId)), "练习题号不完整", 422);
           item.results = item.items.map(question => {
-            const response = text(responses.find(value => value.itemId === question.id)!.response, "作答", 200);
+            const supplied = text(responses.find(value => value.itemId === question.id)!.response, "作答", 200);
+            const response = isBlankAnswer(supplied) ? "" : supplied;
             return { itemId: question.id, response, correct: gradeAnswer(response, question.answers) === "correct", answers: question.answers, explanation: question.explanation };
           });
           item.completedAt = new Date().toISOString();

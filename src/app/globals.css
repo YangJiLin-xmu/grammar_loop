@@ -63,3 +63,17 @@
   .explanation-block p { font-size: 16px; line-height: 1.85; }
   .explanation-block h4 { font-size: 13px; }
 }
+.answer-field { min-width: 0; }
+.question-edit-row { align-items: start; }
+.answer-state { display: block; margin-top: 5px; font-size: 10px; line-height: 1.5; color: #75839c; }
+.answer-state-uncertain { color: #94651f; }
+.answer-state-blank { color: #75839c; }
+.answer-field .confirm-blank { margin-top: 5px; font-size: 11px; min-height: 28px; }
+.status-blank { background: #fff6e7; color: #956a25; }
+.unanswered-result { margin-bottom: 12px; color: #8e651e !important; }
+.question-edit-row .answer-field > input { font-size: 12px; padding: 9px 7px; }
+@media (max-width: 700px) {
+  .question-edit-row .answer-field > input { font-size: 16px; }
+  .answer-state { font-size: 10px; }
+  .answer-field .confirm-blank { font-size: 10px; min-height: 30px; }
+}

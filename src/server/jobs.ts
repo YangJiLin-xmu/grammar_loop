@@ -7,6 +7,7 @@ import { getSample, samples } from "./samples";
 import { readImage, readState, updateState } from "./store";
 import { samplePractice } from "./sample-practice";
 import { tagName } from "../lib/tags";
+import { preserveStudentAnswer, studentAnswerStatus } from "../lib/answers";
 
 export const newJob = (userId: string, kind: Job["kind"], targetId: string, payload?: Job["payload"]): Job => ({ id: randomUUID(), userId, kind, targetId, payload, status: "queued", attempts: 0, updatedAt: new Date().toISOString() });
 const sameText = (a: string, b: string) => a.normalize("NFKC").replace(/\s/g, "") === b.normalize("NFKC").replace(/\s/g, "");
@@ -56,19 +57,21 @@ export async function processJob(userId: string, jobId: string) {
       if (submission.mode === "sample" && !sample) throw new AppError("题面已变更，样例回放无法处理新题目。请恢复原题，或配置 DeepSeek 后使用实时诊断。", 422);
       const references = sample ? Object.fromEntries(sample.questions.map(question => [question.number, question.answers])) : undefined;
       const diagnosed = submission.mode === "sample" ? null : await deepseekAI.diagnose({ passage: submission.passage, questions: submission.questions, references }, { userId, targetId: submission.id });
-      const results: QuestionResult[] = submission.questions.map(input => {
+      const results: QuestionResult[] = submission.questions.map(original => {
+        const input = preserveStudentAnswer(original);
+        const answerStatus = studentAnswerStatus(input);
         const fromSample = sample?.questions.find(question => question.number === input.number);
         const fromAI = diagnosed?.questions.find(question => question.number === input.number);
         const referenceAnswers = fromSample?.answers || fromAI?.referenceAnswers || [];
-        const uncertain = (!fromSample && Boolean(fromAI?.uncertain)) || input.studentAnswer.includes("无法辨认");
+        const uncertain = (!fromSample && Boolean(fromAI?.uncertain)) || answerStatus === "uncertain";
         const gradeStatus = gradeAnswer(input.studentAnswer, referenceAnswers, uncertain);
         const maxScore = sample?.maxScorePerQuestion ?? null;
         return {
           ...input, referenceAnswers, answerSource: sample ? (sample.verification.status === "reviewed" ? "reviewed" : "published_reference") : "ai",
           gradeStatus, maxScore, score: gradeStatus === "uncertain" || maxScore === null ? null : gradeStatus === "correct" ? maxScore : 0,
-          tagId: fromAI?.tagId || fromSample?.tagId || "unclassified", errorPattern: gradeStatus === "correct" ? "与参考答案一致" : fromAI?.errorPattern || (!input.studentAnswer.trim() ? "未作答" : "与参考答案不同"),
-          possibleCause: gradeStatus === "correct" ? "本题作答与参考答案一致。" : fromAI?.possibleCause || "可能尚未熟练区分该语境中的结构或词形；需要结合后续练习确认。",
-          explanation: fromAI?.explanation || fromSample!.explanation, diagnosisVersion: 1, explanationStatus: "ready", disputed: false,
+          tagId: fromAI?.tagId || fromSample?.tagId || "unclassified", errorPattern: answerStatus === "blank" ? "未作答" : answerStatus === "uncertain" ? "作答待核对" : gradeStatus === "correct" ? "与参考答案一致" : fromAI?.errorPattern || "与参考答案不同",
+          possibleCause: answerStatus === "blank" ? "本题未作答，无法仅凭空白判断具体错因。" : answerStatus === "uncertain" ? "原始作答尚未辨认，请先对照原图确认。" : gradeStatus === "correct" ? "本题作答与参考答案一致。" : fromAI?.possibleCause || "可能尚未熟练区分该语境中的结构或词形；需要结合后续练习确认。",
+          explanation: { ...(fromAI?.explanation || fromSample!.explanation), ...(answerStatus === "blank" ? { why: "本题未作答。参考答案和语法规则仅用于学习，不代表你已填写该答案。" } : answerStatus === "uncertain" ? { why: "原始作答待核对，暂不比较或推断你填写了什么。" } : {}) }, diagnosisVersion: 1, explanationStatus: "ready", disputed: false,
         };
       });
       await commit(current => {
@@ -98,6 +101,8 @@ export async function processJob(userId: string, jobId: string) {
         const original = sample.questions.find(item => item.number === question.number)!;
         explanation = { ...original.explanation, rule: original.tagId === question.tagId ? original.explanation.rule : `你将个人复习分类调整为「${tagName(question.tagId)}」。原题规则：${original.explanation.rule}` };
       }
+      const answerStatus = studentAnswerStatus(question);
+      if (answerStatus !== "answered") explanation = { ...explanation, why: answerStatus === "blank" ? "本题未作答。参考答案和语法规则仅用于学习，不代表你已填写该答案。" : "原始作答待核对，暂不比较或推断你填写了什么。" };
       await commit(current => {
         const item = current.submissions.find(entry => entry.id === submission.id)?.questions.find(entry => entry.id === question.id);
         if (item && item.diagnosisVersion === claimed.payload?.version) { item.explanation = explanation; item.explanationStatus = "ready"; }
